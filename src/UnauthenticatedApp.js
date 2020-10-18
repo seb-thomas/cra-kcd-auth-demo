@@ -22,8 +22,7 @@ function LoginForm({ onSubmit, submitButton }) {
       <fieldset>
         <label htmlFor="username">Username</label>
         <input id="username" />
-      </fieldset>
-      <fieldset>
+
         <label htmlFor="password">Password</label>
         <input id="password" type="password" />
       </fieldset>

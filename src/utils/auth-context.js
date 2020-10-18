@@ -23,7 +23,7 @@ async function bootstrapAppData() {
   //   });
   //   user = data.user;
   // }
-  return user;
+  return token;
 }
 
 const AuthContext = React.createContext();
