@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AuthenticatedApp from "./AuthenticatedApp";
+import React from "react";
+import UnauthenticatedApp from "./UnauthenticatedApp";
+import { useAuth } from "./utils/auth-context";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  console.log("<App> - useAuth() - <AuthContext> : ", useAuth());
+  const { user } = useAuth();
+
+  return user ? <AuthenticatedApp /> : <UnauthenticatedApp />;
+};
+
+/*
+ * Inputs and button to login
+ * Thing to send login data backend
+ * Something to send to the right page
+ * Something to return y/n, statuses, loading etc
+ * API fetchy thing
+ * Way to store token
+ * Attach token to reqs
+ */
 
 export default App;

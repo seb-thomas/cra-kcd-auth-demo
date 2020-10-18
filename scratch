@@ -1,0 +1,40 @@
+import React from "react";
+// import axios from "axios";
+
+// async function signinUsernameEmailPassword(
+//   user_name_or_email,
+//   password
+// ) {
+//   const response = await axios.post(
+//     'https://cms.leantech.me/api/auth/signin',
+//     {
+//       user_name_or_email,
+//       password,
+//     }
+//   );
+
+//   const { data } = response;
+//   return data;
+// }
+
+const LoginScreen = () => {
+  return (
+    <button
+    // onClick={() =>
+    //   signinUsernameEmailPassword(
+    //     'testuser01@leantech.me',
+    //     'testuser01'
+    //   )
+    // }
+    >
+      Login
+    </button>
+  );
+};
+const UnauthenticatedApp = () => (
+  <div>
+    <LoginScreen />
+  </div>
+);
+
+export default UnauthenticatedApp;
